@@ -1,4 +1,5 @@
 // Getting form element from HTML file using ID
 // And storing it in a variable
-const calorieCounter = document.getElementById('calorie-counter')
-
+const calorieCounter = document.getElementById('calorie-counter');
+const budgetNumberInput = document.getElementById('budget');
+const entryDropdown = document.getElementById('entry-dropdown');
