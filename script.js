@@ -15,5 +15,5 @@ function cleanInputString(str) {
     // Need to use '\' to escape symbols and whitespace with '\s'
     // use brackets to turn it into a character class to match regex individually
     // const regex = /\+-\s/;
-    const regex =  /[+-\s]/;
+    const regex =  /[+-\s]/g;
 }
