@@ -20,3 +20,15 @@ function cleanInputString(str) {
     // since strings are immutable, replace returns a new string
     return str.replace(regex, "");
 }
+
+function isInvalidInput(str) {
+    //  i flag for insensitive matchs e & E
+    // Number inputs only allow the to occur between 2 digtis
+    // [0-9] will match any digit between 0 & 9
+    // + in regex allows the pattern match one or more times
+    // const regex = /[0-9]+e[0-9]+/i;
+    // \d is a shorthand to match any digit
+    const regex = /\d+e\d+/i;
+    // string have a .match() method that return an array of match results
+    return str.match(regex);
+  }
