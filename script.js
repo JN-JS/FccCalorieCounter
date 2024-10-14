@@ -32,3 +32,9 @@ function isInvalidInput(str) {
     // string have a .match() method that return an array of match results
     return str.match(regex);
   }
+
+//   console.log(isInvalidInput("1e3"));
+// "1e3" is the matched value against the /\d+e\d+/i regex.
+// index: 0 is the index of the matched value in the string.
+// input: '1e3' is the original string that was matched.
+// groups: undefined are the matched groups, which are not used in this case. 
