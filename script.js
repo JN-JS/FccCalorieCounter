@@ -16,4 +16,7 @@ function cleanInputString(str) {
     // use brackets to turn it into a character class to match regex individually
     // const regex = /\+-\s/;
     const regex =  /[+-\s]/g;
+    // 1st arg is character sequence to be replaced, 2nd arg is the string that replace
+    // since strings are immutable, replace returns a new string
+    return str.replace(regex, "");
 }
