@@ -38,3 +38,28 @@ function isInvalidInput(str) {
 // index: 0 is the index of the matched value in the string.
 // input: '1e3' is the original string that was matched.
 // groups: undefined are the matched groups, which are not used in this case. 
+
+function addEntry() {
+    //get the value of the selected option from dropdown
+    // const targetId = '#' + entryDropdown.value
+    // targets the '.input-container' element within the element that has 'targetId'
+    // const targetInputContainer = document.querySelector(targetId + ' .input-container');
+    // const targetInputContainer = document.querySelector(`${targetId} .input-container`);
+    //  // With template literals targetId wasn't necessary
+    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    // get the number of all user entries
+    // querySelectAll returns a nodelist (array like object)
+    // const entryNumber = targetInputContainer.querySelectorAll();
+    //query by text input, can't request by number because of the extra input for calorie budget
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    // build your dynamic HTML string to add to the webpage
+    const HTMLString = `
+        <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
+        <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name"/>
+        <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
+        <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories" />
+    `;
+    // To see targetInputContainer content need to use innerHTML
+    // innerHTML sets & or returns HTML content in an element
+    targetInputContainer.innerHTML += HTMLString;
+}
