@@ -51,7 +51,8 @@ function addEntry() {
     // querySelectAll returns a nodelist (array like object)
     // const entryNumber = targetInputContainer.querySelectorAll();
     //query by text input, can't request by number because of the extra input for calorie budget
-    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    // +1 -> 1st count = 1
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length +1;
     // build your dynamic HTML string to add to the webpage
     const HTMLString = `
         <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
