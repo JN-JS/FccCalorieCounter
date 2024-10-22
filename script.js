@@ -62,4 +62,8 @@ function addEntry() {
     // To see targetInputContainer content need to use innerHTML
     // innerHTML sets & or returns HTML content in an element
     targetInputContainer.innerHTML += HTMLString;
+
+    // addEventListener takes two argument
+    // 1st: the event to listen to(click), 2nd: callback function(the func that run when event is trigger)
+    addEntryButton.addEventListener("click", addEntry);
 }
