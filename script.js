@@ -62,7 +62,10 @@ function addEntry() {
     `;
     // To see targetInputContainer content need to use innerHTML
     // innerHTML sets & or returns HTML content in an element
-    targetInputContainer.innerHTML += HTMLString;
+    // use of innerHTML cause second added value to delete the 1st because it doesn't preserve your input content
+    // insertAdjacentHTML takes 2 arg 
+    // -> 1st: a string that specifies the position of the inserted element, 2nd: string containing the HTML to be inserted
+    targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 
     // addEventListener takes two argument
     // 1st: the event to listen to(click), 2nd: callback function(the func that run when event is trigger)
