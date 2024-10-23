@@ -67,9 +67,13 @@ function addEntry() {
     // -> 1st: a string that specifies the position of the inserted element, 2nd: string containing the HTML to be inserted
     targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 
+    // e common for eventListener
+    function calculateCalories(e) {
+  
+    }
+
     // Gets the calorie counts from user's entries
     // the list param is the result of a query selector that return a NodeList
-    
     function getCaloriesFromInputs(list) {
       let calories = 0;
       // need to loop through array(list), here using a for...of
