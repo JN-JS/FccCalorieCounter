@@ -72,6 +72,8 @@ function addEntry() {
       // submit by default restart the page, fix it with
       e.preventDefault();
       isError = false;
+      // need to get value from added user's entries
+      const breakfastNumberInputs = document.querySelectorAll("#breakfast input[type='number']")
     }
 
     // Gets the calorie counts from user's entries
