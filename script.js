@@ -72,7 +72,6 @@ function addEntry() {
       // submit by default restart the page, fix it with
       e.preventDefault();
       isError = false;
-  
     }
 
     // Gets the calorie counts from user's entries
