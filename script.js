@@ -69,6 +69,9 @@ function addEntry() {
 
     // e common for eventListener
     function calculateCalories(e) {
+      // submit by default restart the page, fix it with
+      e.preventDefault();
+      isError = false;
   
     }
 
