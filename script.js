@@ -73,7 +73,8 @@ function addEntry() {
       e.preventDefault();
       isError = false;
       // need to get value from added user's entries
-      const breakfastNumberInputs = document.querySelectorAll("#breakfast input[type='number']")
+      const breakfastNumberInputs = document.querySelectorAll("#breakfast input[type='number']");
+      const lunchNumberInputs = document.querySelectorAll("#lunch input[type='number']");
     }
 
     // Gets the calorie counts from user's entries
