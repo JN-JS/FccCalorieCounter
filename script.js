@@ -129,18 +129,42 @@ function addEntry() {
           alert(`Invalid Input: ${invalidInputMatch[0]}`);
           // we want to alert user and returns null to indicate that the function has failed
           // so reassign "isError" to true
-          isError = true
+          isError = true;
           return null;
         }
         // need "Number" constructor to convert "currVal" to a number
         // return NaN if it's not a number
         calories += Number(currVal);
       }
-      return calories
+      return calories;
+    }
+
+    function clearForm() {
+      // need to get all of the input containers
+      // document.querySelectorAll returns a NodeList, which is array-like but is not an array
+      // however, the Array object has a .from() method that accepts an array-like and returns an array. 
+      const inputContainers = Array.from(document.querySelectorAll(".input-container"));
+
+      // set the innerHTML property of the container to an empty string -> clear form
+      for (const container of inputContainers) {
+        container.innerHTML = "";
+      }
+
+      // need to clear the budgetNumberInput
+      budgetNumberInput.value = '';
+      // the difference between innerText and innerHTML
+      // innerText will not render HTML elements
+      // but will display the tags and content as raw text.
+      output.innerText = '';
+      // to finish off, you need to restore the hide class to the output element
+      // the classList property has an .add() method
+      output.classList.add('hide');
     }
 
   // addEventListener takes two argument
   // 1st: the event to listen to(click), 2nd: callback function(the func that run when event is trigger)
   addEntryButton.addEventListener("click", addEntry);
   calorieCounter.addEventListener("submit", calculateCalories);
+  clearButton.addEventListener("click", clearForm);
+
 }
