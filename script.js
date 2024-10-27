@@ -97,6 +97,8 @@ function addEntry() {
       const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
       const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
 
+      // determine if user is a caloric surplus or deficit
+      const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
     }
 
     // Gets the calorie counts from user's entries
