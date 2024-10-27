@@ -80,6 +80,10 @@ function addEntry() {
       const exerciseNumberInputs = document.querySelectorAll("#exercise input[type='number']");
       // Pass the lists of elements to getCaloriesFromInputs to extract the calorie total
       const breakfastCalories = getCaloriesFromInputs(breakfastNumberInputs);
+      const lunchCalories = getCaloriesFromInputs(lunchNumberInputs);
+      const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
+      const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
+      const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
     }
 
     // Gets the calorie counts from user's entries
