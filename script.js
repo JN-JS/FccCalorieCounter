@@ -99,6 +99,9 @@ function addEntry() {
 
       // determine if user is a caloric surplus or deficit
       const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
+
+      // construct a HTML string that will be displayed in the output element
+      output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>`;
     }
 
     // Gets the calorie counts from user's entries
