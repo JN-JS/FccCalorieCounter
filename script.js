@@ -102,7 +102,12 @@ function addEntry() {
 
       // construct a HTML string that will be displayed in the output element
       // Math.abs(), Prevent from negative display 
-      output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>`;
+      output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
+      <hr>
+      <p>${budgetCalories} Calories Budgeted</p>
+      <p>${consumedCalories} Calories Consumed</p>
+      <p>${exerciseCalories} Calories Burned</p>
+      `;
     }
 
     // Gets the calorie counts from user's entries
