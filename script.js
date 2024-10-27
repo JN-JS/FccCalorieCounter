@@ -102,12 +102,15 @@ function addEntry() {
 
       // construct a HTML string that will be displayed in the output element
       // Math.abs(), Prevent from negative display 
+      // output variable is an Element, which has a classList property.
+      // property has a .remove() method, which accepts a string representing the class to remove from the element
       output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
       <hr>
       <p>${budgetCalories} Calories Budgeted</p>
       <p>${consumedCalories} Calories Consumed</p>
       <p>${exerciseCalories} Calories Burned</p>
       `;
+      output.classList.remove('hide');
     }
 
     // Gets the calorie counts from user's entries
