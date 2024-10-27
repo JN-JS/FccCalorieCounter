@@ -89,8 +89,14 @@ function addEntry() {
       // getCaloriesFromInputs function will set the global error flag to true if an invalid input is detected
       // checks the truthiness of your global error flag, and if it is truthy then use return to end the function execution
       if(isError) {
-        return
+        return;
       }
+      // preparing calculation
+      // order matters for the test
+      // has to be after the if statement
+      const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
+      const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
+
     }
 
     // Gets the calorie counts from user's entries
