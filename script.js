@@ -78,6 +78,8 @@ function addEntry() {
       const dinnerNumberInputs = document.querySelectorAll("#dinner input[type='number']");
       const snacksNumberInputs = document.querySelectorAll("#snacks input[type='number']");
       const exerciseNumberInputs = document.querySelectorAll("#exercise input[type='number']");
+      // Pass the lists of elements to getCaloriesFromInputs to extract the calorie total
+      const breakfastCalories = getCaloriesFromInputs(breakfastNumberInputs);
     }
 
     // Gets the calorie counts from user's entries
