@@ -84,6 +84,8 @@ function addEntry() {
       const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
       const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
       const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
+      // Get value of #budget input, passing an array containing budgetNumberInput as the argument
+      const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
     }
 
     // Gets the calorie counts from user's entries
