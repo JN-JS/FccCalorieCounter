@@ -101,7 +101,8 @@ function addEntry() {
       const surplusOrDeficit = remainingCalories < 0 ? "Surplus" : "Deficit";
 
       // construct a HTML string that will be displayed in the output element
-      output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>`;
+      // Math.abs(), Prevent from negative display 
+      output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>`;
     }
 
     // Gets the calorie counts from user's entries
