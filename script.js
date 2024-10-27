@@ -86,6 +86,11 @@ function addEntry() {
       const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
       // Get value of #budget input, passing an array containing budgetNumberInput as the argument
       const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
+      // getCaloriesFromInputs function will set the global error flag to true if an invalid input is detected
+      // checks the truthiness of your global error flag, and if it is truthy then use return to end the function execution
+      if(isError) {
+        return
+      }
     }
 
     // Gets the calorie counts from user's entries
