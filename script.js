@@ -142,4 +142,5 @@ function addEntry() {
   // addEventListener takes two argument
   // 1st: the event to listen to(click), 2nd: callback function(the func that run when event is trigger)
   addEntryButton.addEventListener("click", addEntry);
+  calorieCounter.addEventListener("submit", calculateCalories);
 }
